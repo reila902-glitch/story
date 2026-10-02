@@ -111,25 +111,25 @@ const RETRIEVER_ARTWORKS: Record<
   }
 > = {
   기쁨: {
-    src: '/src/assets/images/retriever_joy_1790842790121.jpg',
+    src: '/images/retriever_joy.jpg',
     alt: '햇살 아래 따뜻하고 다정하게 미소 짓는 사랑스러운 골든 리트리버 인절미',
     moodBadge: '햇살 같은 미소 🐾',
     speechBubble: '오늘 정말 기분 좋은 일이 가득했군요! 같이 기뻐할게요, 멍!',
   },
   지침: {
-    src: '/src/assets/images/retriever_tired_1790842809927.jpg',
+    src: '/images/retriever_tired.jpg',
     alt: '앞발에 턱을 괴고 깊은 공감의 눈빛으로 바라보는 포근한 골든 리트리버 인절미',
     moodBadge: '포근한 쉼표 🌙',
     speechBubble: '오늘 하루 정말 수고 많으셨어요. 제 곁에서 푹 쉬어가요...',
   },
   설렘: {
-    src: '/src/assets/images/retriever_flutter_1790842827164.jpg',
+    src: '/images/retriever_flutter.jpg',
     alt: '네잎클로버를 물고 반짝이는 눈망울로 바라보는 골든 리트리버 인절미',
     moodBadge: '행운의 네잎클로버 🍀',
     speechBubble: '두근두근 설레는 마음! 내일도 멋진 일들이 찾아올 거예요!',
   },
   불안: {
-    src: '/src/assets/images/retriever_anxious_1790842844739.jpg',
+    src: '/images/retriever_anxious.jpg',
     alt: '포근한 숄을 두르고 다정한 온기의 앞발을 내미는 골든 리트리버 인절미',
     moodBadge: '다정한 온기의 손길 🧣',
     speechBubble: '불안해하지 마세요, 제가 꼭 붙어서 곁을 든든하게 지켜줄게요.',
@@ -1213,8 +1213,8 @@ export default function App() {
                   <span>🔑 Google Gemini API 키 설정</span>
                 </h4>
                 <p className="text-xs md:text-sm text-[#735F50] mb-2">
-                  API 키를 클라이언트 코드에 하드코딩하지 않고, Express 백엔드 서버(<code>server.ts</code>)를 통해
-                  안전하게 보호하고 있습니다.
+                  API 키를 클라이언트 코드에 하드코딩하지 않고, 로컬에서는 <code>server.ts</code>, Vercel 배포 시에는 서버리스 함수(<code>api/comfort.ts</code>)를 통해
+                  안전하게 보호하고 있습니다. Vercel 환경 변수에 <code>GEMINI_API_KEY</code>만 등록해 주시면 자동으로 안전하게 연결됩니다.
                 </p>
                 <div className="bg-[#FAF6F0] p-3 rounded-xl border border-[#EDE1D1] text-xs font-mono">
                   # .env 파일에 등록:<br />
