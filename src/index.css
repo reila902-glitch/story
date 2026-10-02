@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* 전역 폰트: 간결하지만 둥근 느낌의 감성 손글씨체 (Gamja Flower) 적용 */
+body,
+input,
+textarea,
+button,
+select,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+div {
+  font-family: 'Gamja Flower', 'Gowun Dodum', cursive, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Gamja Flower', 'Gowun Dodum', cursive, sans-serif;
+  letter-spacing: 0;
+}
+
+@layer utilities {
+  .font-round-hand {
+    font-family: 'Gamja Flower', cursive;
+  }
+  .font-hand {
+    font-family: 'Gamja Flower', 'Hi Melody', cursive;
+  }
+  .font-warm {
+    font-family: 'Gamja Flower', 'Gowun Dodum', sans-serif;
+  }
+}
+
+/* 감성 일기장 줄 노트 배경 패턴 */
+.paper-pattern {
+  background-color: #fffdfa;
+  background-image: 
+    linear-gradient(#f1e8dd 1px, transparent 1px);
+  background-size: 100% 2.3rem;
+  line-height: 2.3rem;
+}
+
+/* 부드러운 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf8f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2d7c5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cbbba6;
+}
+
+/* 댕댕이 꼬리 살랑살랑 & 숨쉬기 애니메이션 */
+@keyframes tail-wag {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(18deg); }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes puppy-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.02); }
+}
+
+.animate-tail {
+  transform-origin: 30% 85%;
+  animation: tail-wag 0.8s ease-in-out infinite;
+}
+
+.animate-gentle {
+  animation: gentle-bounce 2.6s ease-in-out infinite;
+}
+
+.animate-puppy-float {
+  animation: puppy-float 3.5s ease-in-out infinite;
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "name": "따뜻한 하루 일기 & AI 응원",
+  "description": "오늘 하루를 돌아보고 따뜻한 골든 리트리버 AI 비서에게 다정한 위로와 내일을 위한 활력 조언을 받는 감성 힐링 다이어리 웹앱",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
